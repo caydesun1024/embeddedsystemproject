@@ -54,6 +54,8 @@
 3.  **온도 측정 및 자동 제어:** 온도 센서 값으로 계산한 온도가 **$28^\circ \text{C}$** 이상이면 `Blind_Down()` 함수를 호출합니다.
 4.  **조도 센서로 복귀:** 자동 제어 완료 후 `tempSensorActive`를 `false`로 설정하고 채널을 다시 조도 센서로 전환합니다.
     * **채널 전환 시 처리:** 채널 전환 후 첫 번째 변환 값은 부정확하므로 무시하며, 매 채널 전환 시 ADC 보정(Calibration)을 수행합니다.
+<img width="717" height="306" alt="image" src="https://github.com/user-attachments/assets/3e62fb27-9fad-4bc0-a831-4e72dca720b5" />
+<img width="746" height="348" alt="image" src="https://github.com/user-attachments/assets/41670e28-c36b-4d88-81c2-9812b740f028" />
 
 #### 3.3. 모터 제어 (`Blind_Up`, `Blind_Down`)
 * **상태 확인:** 블라인드의 현재 위치를 `blindPosition` (FSM 구조)을 통해 확인합니다. 이미 최상단/최하단일 경우 LCD에 "**Already Up**" 또는 "**Already Down**" 메시지를 표시하고 동작을 무시합니다.
